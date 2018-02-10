@@ -96,7 +96,7 @@ for i in range(10):
   print(sess.run(cross_entropy,feed_dict={
         x:batch[0], y_: batch[1],keep_prob:1.0}))
 
-tf.add_to_collection('h_pool1',sess.run(h_pool1,feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5}))
+
 saver.save(sess, "state_art_save")
 
 print("test accuracy %g"%accuracy.eval(feed_dict={
